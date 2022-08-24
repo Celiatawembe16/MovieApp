@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Movies | MyMovieApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+   
+</head>
+
+<body>
+    <header>
+        <div class="header-contents">
+            <h1>Find your film</h1>
+            <a href="Mymovieapp.html" class="header-link">Movie App</a>
+        </div>
+    </header>
+    <main>
+        <div class="main-search-field">
+            <label aria-label="Search for a movie" class="hide">Search for a
+                movie</label>
+            <input type="text" for="submit" id="searchInput" placeholder="Search for a movie">
+            <button type="submit" value="Submit" id="searchBtn">Search</button>
+        </div>
+
+        <div class="main-contents" id="moviesList">
+            <div id="movielist-default-container">
+                <img src="images/movie-icon.svg" alt="Search movie list to start exploring movies."
+                    class="movie-icon movie-list-default-display">
+                <p class="text-grey-light fs-18 bold movie-list-default-display">Start exploring</p>
+            </div>
+        </form>
+        <div id="result"></div>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.main.js"></script>
+
+
+
+</body>
+<Script>$(document).ready(function(){
+    var apikey = "99862e66"
+    $("#movieForm").submit(function(event){
+        event.preventDefault()
+
+     var movie = $("#movie").val()
+
+     var url = " http://www.omdbapi.com/?apikey="+apikey
+
+     $.ajax({
+         method: 'GET',
+         url:url+"&t="+movie,
+         success:function(data){
+             console.log(data)
+             result = 
+             <img style="float:left" class="img-thumnail" width="200" height="200"/>
+         }
+    })
+    })
+})
+</Script>
+
+
+</html>
